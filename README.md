@@ -13,11 +13,13 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 ReactDOM.render(
-<React.StrictMode>
+
+<!-- <React.StrictMode>
 <BrowserRouter>
 <App />
 </BrowserRouter>
-</React.StrictMode>,
+</React.StrictMode>, -->
+
 document.getElementById("root")
 );
 
@@ -30,6 +32,7 @@ import Products from "./pages/Products";
 const App = () => {
 return (
 
+<!--
 <div>
 <Route path="/welcome">
 <Welcome />
@@ -37,7 +40,8 @@ return (
 <Route path="/products">
 <Products />
 </Route>
-</div>
+</div> -->
+
 );
 };
 
@@ -46,14 +50,15 @@ return (
 # step 4: create links to our pages (<a href={}> could be an option but it relaod the page, and so we loose all our store, state...)
 
 so we use the link component (or the NavLink component if we need to highlight the link in css in which we are currently navigating through
-confere /components/MainHeader.js to understand the difference)  
-<NavLink to="/welcome" activeClassName={classes.active}> --> refers then to css a.active and not only a:active
+confere /components/MainHeader.js to understand the difference)
+
+<!-- <NavLink to="/welcome" activeClassName={classes.active}> --> refers then to css a.active and not only a:active -->
 
 import { Link } from "react-router-dom";
 const MainHeader = () => {
 return (
 
-<header>
+<!-- <header>
 <nav>
 <ul>
 <li>
@@ -64,7 +69,8 @@ return (
 </li>
 </ul>
 </nav>
-</header>
+</header> -->
+
 );
 };
 export default MainHeader;
@@ -81,7 +87,7 @@ import ProductDetails from "./pages/ProductDetails";
 const App = () => {
 return (
 
-<div>
+<!-- <div>
 <MainHeader />
 <main>
 <Route path="/welcome">
@@ -94,7 +100,8 @@ return (
 <ProductDetails />
 </Route>
 </main>
-</div>
+</div> -->
+
 );
 };
 export default App;
@@ -108,11 +115,13 @@ const params = useParams();
 console.log(params.productID); // because in App we declared path="/product-details/:productID"> but we could add as much parameters /: as we want in the app.js, it will be detected in params with the associated key
 return (
 
+<!--
 <section>
 <h1>ProductDetails</h1>
 <p>{params.productID}</p>
 <p>{params.productName}</p>
-</section>
+</section> -->
+
 );
 };
 
@@ -137,11 +146,10 @@ import ProductDetails from "./pages/ProductDetails";
 const App = () => {
 return (
 
-<div>
+<!-- <div>
 <MainHeader />
 <main>
-<Switch>
-
+        <Switch>
           <Route path="/welcome">
             <Welcome />
           </Route>
@@ -153,7 +161,7 @@ return (
           </Route>
         </Switch>
       </main>
-    </div>
+    </div> -->
 
 );
 };
@@ -167,13 +175,14 @@ import { Route } from "react-router-dom";
 const Welcome = () => {
 return (
 
+<!--
 <section>
 <h1>The Welcome Page</h1>
 <Route path="/welcome/new-user">
 <!-- of course that means that path must start by /welcome/ otherwise the Welcome component will never be called so this code wont be executed! logically! -->
 <p>Welcome New User</p>
 </Route>
-</section>
+</section> -->
 );
 };
 export default Welcome;
@@ -189,6 +198,7 @@ import ProductDetails from "./pages/ProductDetails";
 const App = () => {
 return (
 
+<!--
 <div>
 <MainHeader />
 <main>
@@ -207,7 +217,8 @@ return (
 </Route>
 </Switch>
 </main>
-</div>
+</div> -->
+
 );
 };
 
